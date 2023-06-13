@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+    <h2>JavaScript in Body</h2>
+
+    <p id="demo00"></p> 
+    
+    <script>
+    document.getElementById("demo00").innerHTML = "My First JavaScript";
+    </script>
+</div>
+    
+<br>
+<br>
+<br>
+<div>
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo0">JavaScript can change the text </p>
+     <button type="button" onclick='document.getElementById("demo0").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+</div>
+
+<br>
+<br>
+<br>
+<div>
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo1">JavaScript can change the style of an HTML element.</p>
+    <button type="button" onclick="document.getElementById('demo1').style.fontSize='35px'">Click Me!</button>
+</div>
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Functions</h2>
+     <p id="demo2">changing A Paragraph using function.</p>
+     <button type="button" onclick="myFunction1()">Try it</button>
+     <script>
+      function myFunction1() {
+     document.getElementById("demo2").innerHTML = "Paragraph changed using function.";
+     }
+     </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Expressions</h2>
+    <p>Expressions compute to values.</p>
+    <p id="demo3"></p>
+    <script>
+    document.getElementById("demo3").innerHTML = "John" + " "  + "Doe";
+     </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Function Calling</h2>
+    <p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+      <p id="demo4"></p>
+     <script>
+      function toCelsius(f) {
+      return (f-3) * (f-2);
+    } 
+    document.getElementById("demo4").innerHTML = toCelsius(6);
+    </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Objects</h2>
+    <p>There are two different ways to access an object property.</p>
+    <p>You can use person.property or person["property"].</p>
+    <p id="demo5"></p>
+    <script>
+    // Create an object:
+    var person = {
+      firstName: "John",
+      lastName : "Doe",
+      id     :  5566
+    };    
+    // Display some data from the object:
+    document.getElementById("demo5").innerHTML =
+    person["firstName"] + " " + person.lastName ;
+    </script>
+</div>
+
+<br>
+<br>
+<br>  
+
+<div>
+    <h3>Html Events Example</h3>
+    <p id="demo6"></p> 
+    <button onclick="document.getElementById('demo6').innerHTML=Date()">Click here to know current date and time</button>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript String Methods</h2>
+    <p>The search() method returns the position of the first occurrence of a specified text in a string:</p>
+    <p id="demo7"></p>
+    <script>
+    let str = "Please locate where 'locate' occurs!";
+    document.getElementById("demo7").innerHTML = str.search("locate");
+    </script> 
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Numbers</h2>
+    <p>If you add two numbers, the result will be a number:</p>
+    <p id="demo8"></p>
+    <script>
+    let x = 10;
+    let y = 90;
+    let z = x + y;
+    document.getElementById("demo8").innerHTML = x+y;
+    </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Arrays</h2>
+    <p id="demo9"></p>
+    <script>
+    const Bikes = ["Bullet", "FZ", "Scooty"];
+    document.getElementById("demo9").innerHTML = Bikes;
+    </script>
+</div>
+
+<br>
+<br>
+<br>
+<div>
+    <h2>JavaScript new Date()</h2>
+    <p id="demo10"></p>
+    <script>
+    var d = new Date();
+    document.getElementById("demo10").innerHTML = d;
+    </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript if .. else</h2>
+    <p>A time-based greeting:</p>
+    <p id="demo11"></p>
+    <script>
+    var time = new Date().getHours();
+    let greeting;
+    if (time < 10) {
+          greeting = "Good morning";
+        } 
+    else if (time < 20) {
+              greeting = "Good day";
+            } 
+    else {
+        greeting = "Good evening";
+         }
+    document.getElementById("demo11").innerHTML = greeting;
+    </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript switch</h2>
+    <p id="demo12"></p>
+    <script>
+    let day;
+    switch (new Date().getDay()) {
+          case 0:
+                  day = "Sunday";
+                break;
+          case 1:
+                  day = "Monday"; 
+                break;
+          case 2:
+                  day = "Tuesday";
+                break;
+          case 3:
+                  day = "Wednesday";
+                break;
+          case 4:
+                  day = "Thursday";
+                break;
+          case 5:
+                  day = "Friday";
+                break;
+          case  6:
+                  day = "Saturday";
+                }
+document.getElementById("demo12").innerHTML = "Today is " + day;
+</script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript For Loop</h2>
+    <p id="demo13"></p>
+    <script>
+    let text = "";
+    for (let i = 0; i < 4; i++) {
+          text = text + "The number is " + i + "<br>";
+        }
+    document.getElementById("demo13").innerHTML = text;
+    </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript While Loop</h2>
+    <p id="demo14"></p>
+    <script>
+    let text1 = "";
+    let i = 0;
+    while (i < 4) {
+      text1 += "<br>The number is " + i;
+        i++;
+       }
+    document.getElementById("demo14").innerHTML = text1;
+    </script>
+</div>
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Error Handling</h2>
+    <p>How to use CATCH to display an error.</p>
+    <p id="demo15"></p>
+    <script>
+    try {
+          adddlert("Welcome guest!");
+        }
+    catch(err) {
+          document.getElementById("demo15").innerHTML = err.message="no wories yoo";
+          }
+    </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript try catch</h2>
+    <p>Please input a number between 5 and 10</p>
+    <input id="demo16" type="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01">Result will show here</p>
+    <script>
+    function myFunction() {
+          const msg = document.getElementById("p01");
+            msg.innerHTML = "";
+              let x = document.getElementById("demo16").value;
+              try { 
+                      if(x == "")  throw "empty";
+                      if(isNaN(x)) throw "not a number";
+                              x = Number(x);
+                                  if(x < 5)  throw "too low";
+                                  if(x > 10)   throw "too high";
+                                  if(x > 10 && x < 5)   throw "Perfect";
+                      }
+             catch(err) {
+                      msg.innerHTML = "Input is " + err;
+                      }
+        }
+    </script>
+</div>
+
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Arrow Function</h2>
+    <p>This example shows the syntax of an Arrow Function, and how to use it.</p>
+    <p id="demo17">Arrow value</p>
+    <script>
+        // not working for now DNDC
+    let myFunction = (l,m) => a * b;
+    document.getElementById("demo17").innerHTML = myFunction(5,6);
+    </script>
+</div>
+<br>
+<br>
+<br>
+
+<div>
+    <h2>JavaScript Class</h2>
+    <p>How to use a JavaScript Class.</p>
+    <p id="demo18"></p>
+    <script>
+    class Car {
+          constructor(name, year) {
+                  this.name = name;
+                  this.year = year;
+                  }
+      }
+      const myCar = new Car("Ford", 2014);
+      document.getElementById("demo18").innerHTML = myCar.name + " " + myCar.year;
+      </script>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <script>
+        const sum = function(...args){ 
+                let sum = 0; 
+                for(let i of args){ 
+                            sum+=i; 
+                    } 
+                    return sum; 
+            }
+            console.log(sum(1,2,3,4,5))
+    </script>
+</div>
+ </html>
